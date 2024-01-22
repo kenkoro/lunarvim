@@ -5,4 +5,5 @@ linters.setup({
 	{ command = "hadolint", filetypes = { "dockerfile" }, arg = { "--no-fail" } },
 	{ command = "ktlint", filetypes = { "kotlin" } },
 	{ command = "pylint", filetypes = { "python" } },
+	{ command = "commitlint", filetypes = { "gitcommit" } },
 })

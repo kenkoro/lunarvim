@@ -34,5 +34,13 @@ lvim.keys.normal_mode["<S-l>"] = ":bnext<CR>"
 lvim.keys.normal_mode["<S-h>"] = ":bprevious<CR>"
 lvim.keys.visual_mode["p"] = '"_dP'
 lvim.keys.insert_mode["jk"] = "<ESC>"
+lvim.builtin.terminal.open_mapping = "<c-t>"
 
 vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "jdtls" })
+
+require("lspconfig").clangd.setup({
+	cmd = {
+		"clangd",
+		"--offset-encoding=utf-16",
+	},
+})
